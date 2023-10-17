@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});
+  // 'this', the value that's being passed to the function is what's setting the value or the the 'startQuiz' variable
 
   final void Function() startQuiz;
 

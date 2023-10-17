@@ -12,23 +12,36 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  Widget? activeScreen;
+  var activeScreen = 'start-screen';
   // '?' means the value can be null
 
-  @override
-  void initState() {
-    activeScreen = StartScreen(switchScreen);
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   activeScreen = StartScreen(switchScreen);
+  //   super.initState();
+  // }
 
   void switchScreen() {
     setState(() {
-      activeScreen = const QuestionsScreen();
+      activeScreen = 'questions-screen';
     });
   }
 
+  //above we have passed the 'switchScreen' function to the 'StartScreen' widget, giving the start screen access to the 'state'. So when the button is clicked on the start screen, it triggers the 'StartQuiz' function variable declared on the startScreen file, which we've set to be the value of our switch screen function, triggering the change.
+
+  //It's a little confusing that the startquiz parameter is named something other than the function value we are actually passing to it. Can they be named the same thing?
+
   @override
   Widget build(context) {
+    // final screenWidget = activeScreen == 'start-screen'
+    //     ? StartScreen(switchScreen)
+    //     : const QuestionsScreen();
+
+    Widget screenWidget = StartScreen(switchScreen);
+    if(activeScreen == 'questions-screen'){
+    screenWidget = const QuestionsScreen(); 
+    }
+
     return MaterialApp(
       home: Scaffold(
           body: Container(
@@ -38,7 +51,7 @@ class _QuizState extends State<Quiz> {
             Color.fromARGB(190, 46, 7, 100)
           ], begin: Alignment.topLeft, end: Alignment.bottomRight),
         ),
-        child: activeScreen,
+        child: screenWidget,
       )),
     );
   }
