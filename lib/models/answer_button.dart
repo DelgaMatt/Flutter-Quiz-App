@@ -15,11 +15,17 @@ class AnswerButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color.fromARGB(255, 33, 13, 90),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+        backgroundColor: const Color.fromARGB(255, 24, 5, 70),
         foregroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))
-      ),
-      child: const Text('Answer 1'),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))),
+      child: Text(
+        answerText,
+        textAlign: TextAlign.center,
+        ),
     );
   }
 }
+
+// above, 'foregroundColor' wouldn't work for me but 'disabledForegroundColor' did work for me. What's up with that?
+// This situation changed after i added state to the questions screen?
