@@ -8,6 +8,7 @@ class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key, required this.onSelectAnswer});
 
   final void Function(String answer) onSelectAnswer;
+  // how would this work using a positional argument?
 
   @override
   State<StatefulWidget> createState() {
