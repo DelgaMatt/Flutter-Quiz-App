@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/data/questions_list.dart';
+import 'package:quiz/models/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({super.key, required this.chosenAnswers});
@@ -17,6 +18,8 @@ class ResultsScreen extends StatelessWidget {
         'user_answer': chosenAnswers[i]
       });
     }
+    // I dont ever remember naming my index's in for loops with JS. 
+    // Do i have to name them? is is this just the way we are choosing to retrieve this data?
 
     return summary;
   }
@@ -27,17 +30,17 @@ class ResultsScreen extends StatelessWidget {
         width: double.infinity,
         child: Container(
             margin: const EdgeInsets.all(40),
-            child: const Column(
+            child: Column(
               children: [
-                Text('you answered x out of y questions correctly'),
-                SizedBox(
+                const Text('you answered x out of y questions correctly'),
+                const SizedBox(
                   height: 30,
                 ),
-                Text('list of answers and questions'),
-                SizedBox(
+                QuestionsSummary(getSummaryData()),
+                const SizedBox(
                   height: 30,
                 ),
-                TextButton(onPressed: null, child: Text('Restart Quiz'))
+                const TextButton(onPressed: null, child: Text('Restart Quiz'))
               ],
             )));
   }
