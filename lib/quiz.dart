@@ -43,6 +43,13 @@ class _QuizState extends State<Quiz> {
 
   //It's a little confusing that the startquiz parameter is named something other than the function value we are actually passing to it. Can they be named the same thing?
 
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = 'questions-screen';
+    });
+  }
+
   @override
   Widget build(context) {
     // final screenWidget = activeScreen == 'start-screen'
@@ -55,7 +62,11 @@ class _QuizState extends State<Quiz> {
     }
 
     if (activeScreen == 'results-screen') {
-      screenWidget = ResultsScreen(chosenAnswers: selectedAnswers,);
+      screenWidget = ResultsScreen(
+        onRestart: restartQuiz,
+        chosenAnswers: selectedAnswers,
+        
+      );
     }
 
     return MaterialApp(
