@@ -16,9 +16,9 @@
   Press the 'Start Quiz' button, Select Answers, View your results.
 
    <img src="https://github.com/DelgaMatt/Dice-Roller/assets/115049801/395c23ba-c398-4709-81c7-7942c343d177" width="320" height="650">
-
+   <br>
    <img src="https://github.com/DelgaMatt/Dice-Roller/assets/115049801/a0f62631-044a-4e29-8865-155bdd709ac1" width="320" height="650">
-
+   <br>
    <img src="https://github.com/DelgaMatt/Dice-Roller/assets/115049801/c06062bc-81e5-497b-b392-24357128a4e4" width="320" height="650">
 
   ## License
