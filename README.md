@@ -1,7 +1,8 @@
 # Flutter Quiz App
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ![License Badge](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
   ![License Badge](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
+  <br>
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
    ## Description
   A mobile quiz application built using Dart and Flutter consisting of 6 Flutter related Questions. At the end of the quiz, the user is given the opportunity to review the questions, their selected answers and the correct answers. The user also has the opportunity to restart the quiz.
