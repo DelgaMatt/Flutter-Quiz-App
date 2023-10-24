@@ -22,9 +22,9 @@ class ResultsScreen extends StatelessWidget {
         'user_answer': chosenAnswers[i]
       });
     }
+
     // I dont ever remember naming my index's in for loops with JS.
     // Do i have to name them? is is this just the way we are choosing to retrieve this data?
-
     return summary;
   }
 
@@ -61,7 +61,7 @@ class ResultsScreen extends StatelessWidget {
             OutlinedButton.icon(
               onPressed: onRestart,
               style: OutlinedButton.styleFrom(
-                disabledForegroundColor: Colors.white,
+                foregroundColor: Colors.white,
               ),
               icon: const Icon(Icons.restart_alt_rounded),
               label: const Text('Restart Quiz'),

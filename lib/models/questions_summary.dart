@@ -2,12 +2,11 @@
 
 import 'package:flutter/material.dart';
 
-
 class QuestionsSummary extends StatelessWidget {
   const QuestionsSummary(this.summaryData, {super.key});
 
   final List<Map<String, Object>> summaryData;
-
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -15,11 +14,10 @@ class QuestionsSummary extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: summaryData.map((data) {
-              return Row(
-                children: [
+              return Row(children: [
                 CircleAvatar(
-                  
-                  backgroundColor: const Color.fromARGB(255, 241, 120, 160),
+                  backgroundColor: data['user_answer'] as String == data['correct_answer'] as String ? const Color.fromARGB(255, 90, 150, 246) : const Color.fromARGB(255, 241, 120, 160),
+                  // const Color.fromARGB(255, 241, 120, 160),
                   foregroundColor: Colors.black,
                   child: Text(
                     ((data['question_index'] as int) + 1).toString(),

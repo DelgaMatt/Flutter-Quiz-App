@@ -20,7 +20,7 @@
    <br>
    <img src="https://github.com/DelgaMatt/Dice-Roller/assets/115049801/a0f62631-044a-4e29-8865-155bdd709ac1" width="320" height="650">
    <br>
-   <img src="https://github.com/DelgaMatt/Dice-Roller/assets/115049801/c06062bc-81e5-497b-b392-24357128a4e4" width="320" height="650">
+   <img src="https://github.com/DelgaMatt/Flutter-Quiz-App/assets/115049801/a05ff442-b190-49c0-84ee-15f0ff04f7e0" width="320" height="650">
 
   ## License
   This app is covered under the [MIT License](https://opensource.org/licenses/MIT)<br>
